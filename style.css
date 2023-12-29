@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    overflow: hidden;
+}
+
+.container .img-container {
+    width: 300px;
+    -webkit-mask: linear-gradient(90deg, transparent 0, black 20%, black 80%, transparent 100%);
+    mask: linear-gradient(90deg, transparent 0, black 20%, black 80%, transparent 100%);
+}
+
+.container .images {
+    display: flex;
+}
+
+.container .images img {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+}
+
+.container .controllers {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+}
+
+.container .controllers .control {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: all 50ms linear;
+}
+.container .controllers .control:hover {
+    margin: 5px;
+    height: 40px;
+    width: 40px;
+}
+
+.container .controllers .control#left::before {
+    content: "<";
+}
+
+.container .controllers .control#right::before {
+    content: "<";
+  }
